@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:btn="http://xmlns.jcp.org/jsf/composite/custom">
+
+	<ui:define name="content">
+		<h:form enctype="multipart/form-data" id="addForm">
+
+			<p:messages id="messages" showDetail="true" autoUpdate="true"
+				closable="true" style="font-family: 'vazir';" />
+
+			<p:panel id="panel" styleClass="contentbox mt-3"
+				header="#{msg['usr.newusr'] }">
+				<div id="holdcontent">
+					<h:panelGrid columns="2" cellpadding="6">
+						<p:outputLabel  for="addusername" value="#{msg['usr.usrname'] }"
+							style="font-family: 'vazir';" />
+						<p:inputText type='text' id='addusername'
+							value="#{userController.tblUser.userUsername}"
+							required="true">
+						</p:inputText>
+						<p:outputLabel for="adduserip" value="#{msg['usr.ip'] }"
+							style="font-family: 'vazir';" />
+						<p:inputText type='text' id='adduserip'
+							value="#{userController.tblUser.userIP}"
+							requiredMessage="#{msg['validation.necessary.ip']}"
+							required="true">
+						</p:inputText>
+						<p:outputLabel for="userdesc" value="#{msg['usr.usrdesc'] }"
+							style="font-family: 'vazir';" />
+						<p:inputText type='text' id='userdesc'
+							value="#{userController.tblUser.userDescription}"
+							requiredMessage="#{msg['validation.necessary.usrdesc']}"
+							required="true">
+						</p:inputText>
+						<p:outputLabel for="userpass" value="#{msg['usr.usrpass']}"
+							style="font-family: 'vazir';" />
+						<p:password type='text' id='userpass' redisplay="true"
+							validator="#{userController.validate}" 
+							value="#{userController.userPassword}"
+							requiredMessage="#{msg['validation.necessary.usrpass']}"
+							required="true"
+							validatorMessage="#{msg['validation.necessary.usrpass.same']}"
+							feedback="true"
+							promptLabel="#{msg['validation.necessary.usrpass.chr']}">
+							<p:ajax event="blur" update="messages" style="font-family: 'vazir';"/>
+						</p:password>
+						<p:outputLabel for="userpass" value="#{msg['usr.conf.usrpass']}"
+							style="font-family: 'vazir';" />
+						<p:password type='text' id='userpass2'
+							value="#{userController.userPasswordRpt}"
+							requiredMessage="#{msg['validation.necessary.conf.usrpass']}"
+							required="true" feedback="true"
+							promptLabel="#{msg['validation.necessary.usrpass.rpt.same']}">
+							<p:ajax event="blur" update="messages" style="font-family: 'vazir';"/>
+						</p:password>
+
+					</h:panelGrid>
+					<h:panelGrid columns="3" cellpadding="15">
+						<p:outputLabel for="usrStatus" value="#{msg['usr.status']}"
+							style="font-family: 'vazir';" />
+						<p:inputSwitch id="usrStatus" value="#{userController.userStatus}">
+							<p:ajax listener="#{userController.addMessage}"
+								update="usrstusid" />
+						</p:inputSwitch>
+						<p:outputLabel id="usrstusid" value="#{userController.summary}"
+							tyle="font-family: 'vazir';" />
+					</h:panelGrid>
+					
+					
+				
+					
+					<table class="tblbtn">
+						<tr>
+							<td><h:panelGrid columns="3" cellpadding="1">
+									<p:commandButton styleClass="ui-priority-primary" ajax="false"
+										action="#{userController.createByAdmin()}"
+										value="#{msg['btn.submit']}" update="@form" 
+										/>
+									<p:commandButton styleClass="ui-priority-primary"
+										action="#{userController.backToList()}"
+										value="#{msg['btn.back.list']}" immediate="true" />
+								</h:panelGrid></td>
+						</tr>
+					</table>
+				</div>
+
+			</p:panel>
+
+
+
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,5 @@
+package utopia.enumeration;
+
+public enum ConfigEnum {
+	SCHEDULER, WBSERVICE, WBSERVICEACTION, BIIP, BIPORT, BIADMIN, BIADMINPASS, BIDASHBOARDPORT, PROTOCOL;
+}
