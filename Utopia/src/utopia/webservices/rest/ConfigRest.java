@@ -3,23 +3,19 @@ package utopia.webservices.rest;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.core.MediaType;
-
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import utopia.entities.TblConfig;
 import utopia.entities.TblUser;
 import utopia.enumeration.ExecutionStatusEnum;
@@ -45,8 +41,7 @@ public class ConfigRest {
 		configService = new ConfigService(configFacade);
 	}
 
-	// Specifies that the method processes HTTP POST requests and return all users
-	// object from DB
+
 	@Path("/lstconfigs")
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
@@ -77,8 +72,7 @@ public class ConfigRest {
 		return main.toString();
 	}
 
-	// Specifies that the method processes HTTP POST requests and edit users list
-	// object from DB
+	
 	@POST
 	@Path("/addconfigs")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -115,8 +109,7 @@ public class ConfigRest {
 
 	}
 
-	// Specifies that the method processes HTTP POST requests and edit users list
-	// object from DB
+
 	@POST
 	@Path("/editconfigs")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -152,8 +145,7 @@ public class ConfigRest {
 			return ExecutionStatusEnum.SUCCESSFUL.toString();
 	}
 
-	// Specifies that the method processes HTTP POST requests and edit users list
-	// object from DB
+
 	@POST
 	@Path("/removeconfigs")
 	@Produces(MediaType.APPLICATION_JSON)
