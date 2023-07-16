@@ -57,8 +57,7 @@ public class UsersRest {
 		ugService = new UserGroupService(ugFacade, userFacade, groupFacade);
 	}
 
-	// Specifies that the method processes HTTP POST requests and return all users
-	// object from DB
+
 	@Path("/userscount")
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
@@ -74,8 +73,6 @@ public class UsersRest {
 		return main.toString();
 	}
 
-	// Specifies that the method processes HTTP POST requests and return all users
-	// object from DB
 	@Path("/lstusers")
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
@@ -112,8 +109,7 @@ public class UsersRest {
 		return main.toString();
 	}
 
-	// Specifies that the method processes HTTP POST requests and edit users list
-	// object from DB
+
 	@POST
 	@Path("/addusers")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -148,8 +144,7 @@ public class UsersRest {
 
 	}
 
-	// Specifies that the method processes HTTP POST requests and edit users list
-	// object from DB
+
 	@POST
 	@Path("/editusers")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -182,8 +177,7 @@ public class UsersRest {
 
 	}
 
-	// Specifies that the method processes HTTP POST requests and edit users list
-	// object from DB
+
 	@POST
 	@Path("/removeusers")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -219,8 +213,7 @@ public class UsersRest {
 
 	}
 
-	// Specifies that the method processes HTTP POST requests and return all users
-	// object from DB
+
 	@Path("/lstgroupsofuser")
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
