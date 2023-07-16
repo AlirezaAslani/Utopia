@@ -10,21 +10,18 @@ In the Entity Layer, the focus is on implementing entities and a general facade.
 The Application Layer is responsible for implementing various components that interact with the outside world and handle different aspects of the application.
 
 #### Components in the Application Layer
-##### REST/SOAP API
+- ##### REST/SOAP API
+  The Application Layer exposes REST and SOAP APIs, allowing external systems to communicate with the application and perform CRUD (Create, Read, Update, Delete) operations.
 
-The Application Layer exposes REST and SOAP APIs, allowing external systems to communicate with the application and perform CRUD (Create, Read, Update, Delete) operations.
+- ##### JSF Presentation
+  The Application Layer utilizes <abbr title="JavaServer Faces">JSF</abbr> along with PrimeFaces, a popular UI component library, to create a modern and interactive web-based interface for the application.
 
-##### JSF Presentation
-
-The Application Layer utilizes <abbr title="JavaServer Faces">JSF</abbr> along with PrimeFaces, a popular UI component library, to create a modern and interactive web-based interface for the application.
-
-##### SOAP Web Service Integration
-
-This layer also handles the integration with other SOAP web services to fetch data from external applications.
+- ##### SOAP Web Service Integration
+  This layer also handles the integration with other SOAP web services to fetch data from external applications.
 
 
-#### Three-Layer vs. Single-Layer Approach
-While the project is designed based on a three-layer architecture (Entity, Application, and WAR Layer), it also caters to users who prefer a single-layer approach. The WAR Layer encompasses the main part of the application and can be used without any modifications or additional effort, making it convenient for those who prefer a simpler architecture.
+- ##### Three-Layer vs. Single-Layer Approach
+  While the project is designed based on a three-layer architecture (Entity, Application, and WAR Layer), it also caters to users who prefer a single-layer approach. The WAR Layer encompasses the main part of the application and can be used without any modifications or additional effort, making it convenient for those who prefer a simpler architecture.
 
 # Features
 The application offers the following features:
@@ -37,8 +34,9 @@ The SimpleCaptcha library is installed as alocal maven repo in the project.
 
 #### Filters
 ###### 1. Cross Filter
+Cross-origin resource sharing (CORS) is a mechanism that allows JavaScript on a web page to make AJAX requests to another domain, different from the domain from where it originated. By default, such web requests are forbidden in browsers, and they will result in same-origin security policy errors. Using the Java CORS filter, you may allow the webpage to make requests from other domains as well (known as cross-domain requests).
 
-###### 1. Security Filter
+###### 2. Security Filter
 There are lots of ways to implement security with user authentication and authorization in the RESTful web services.
 The main types of security we are going to talk about are the following:
 
@@ -155,7 +153,8 @@ Choose **Oracle** as the **Database Type** and click **Next**.
 
 8. On the **Transaction Options** page, retain all default values and click **Next**.
 
-9. On the** Connection Properties** page:
+9. On the **Connection Properties** page:
+
 | Field  | Value |
 | ------------- | ------------- |
 | **Database Name**  |  XE (your database name may be different)  |
@@ -210,7 +209,6 @@ Build the project using Maven: mvn clean install
 Deploy the WAR Layer to your application server of choice (e.g., Weblogic, Glassfish).
 
 
-``
 ## Version Compatibility
 
 | Java  | Maven | Weblogic|
