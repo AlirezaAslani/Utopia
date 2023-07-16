@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "6f4f12ba-8e00-42aa-9558-7d0e52a0a414",
+		"name": "Group API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "groupsCount local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/group/groupscount?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"group",
+						"groupscount"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listGroup local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first\": \"0\",\n    \"max\": \"1000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.250:9502/Utopia/rest/group/addgrouptogroup?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"250"
+					],
+					"port": "9502",
+					"path": [
+						"Utopia",
+						"rest",
+						"group",
+						"addgrouptogroup"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editGroup local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"groupGroupBIG\": {\n        \"GROUP_STATUS\": \"1\",\n        \"GROUP_DESCRIPTION\": \"BIG\",\n        \"GROUP_DISPLAYNAME\":\"BIG\"\n    },\n    \"tes5t1\": {\n        \"GROUP_STATUS\": \"1\",\n        \"GROUP_DESCRIPTION\": \"update1\",\n        \"GROUP_DISPLAYNAME\":\"edit\"\n    },\n    \"fkGroup\": {\n        \"GROUP_STATUS\": \"0\",\n        \"GROUP_DESCRIPTION\": \"update1\",\n        \"GROUP_DISPLAYNAME\":\"edit\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/group/editgroups?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"group",
+						"editgroups"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeGroup local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mainGroup\": {\n        \"GROUP_STATUS\": \"1\",\n        \"GROUP_DESCRIPTION\": \"update1\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/group/removegroups?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"group",
+						"removegroups"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addGroup local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"groupGroupBIG\": {\n        \"GROUP_STATUS\": \"1\",\n        \"GROUP_DESCRIPTION\": \"ContentAuthors can view and modify all resource attributes\",\n        \"GROUP_DISPLAYNAME\":\"GROUP_DISPLAYNAME\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/group/addgroups?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"group",
+						"addgroups"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lstUsersOfGroup local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"GROUP_NAME\": \"mainGroup\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/group/lstusersofgroup?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"group",
+						"lstusersofgroup"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findGroup local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"GROUP_NAME\": \"mainGroup\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/group/findgroup?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"group",
+						"findgroup"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterByGroupName local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"GROUP_DISPLAYNAME\": \"G\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/group/filterbygroupname?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"group",
+						"filterbygroupname"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

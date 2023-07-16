@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "ffb48e99-cf7b-47c6-9629-e79a7d1b9499",
+		"name": "Config",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listConfig viuna",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first\": \"0\",\n    \"max\": \"10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.250:9502/Utopia/rest/config/lstconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"250"
+					],
+					"port": "9502",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"lstconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listConfig remote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first\": \"0\",\n    \"max\": \"10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://5.201.178.229:9502/Utopia/rest/config/lstconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"5",
+						"201",
+						"178",
+						"229"
+					],
+					"port": "9502",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"lstconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listConfig local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first\": \"0\",\n    \"max\": \"10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/config/lstconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"lstconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addConfig viuna",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BIDASHBOARDPORT\": {\n        \"CNF_DESCRIPTION\": \"9502\",\n        \"CNF_STATE\": \"0\",\n        \"CNF_TYPE\": \"BIDASHBOARDPORT2\",\n        \"CNF_NAME\": \"BIDASHBOARDPORT2\"\n    },\n    \"BIADMINPASS2\": {\n        \"CNF_DESCRIPTION\": \"oracle12C\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMINPASS2\",\n        \"CNF_NAME\": \"BIADMINPASS2\"\n    },\n    \"BIIP2\": {\n        \"CNF_DESCRIPTION\": \"192.168.1.250\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIIP2\",\n        \"CNF_NAME\": \"BI IP2\"\n    },\n    \"BIPORT2\": {\n        \"CNF_DESCRIPTION\": \"9500\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIPORT2\",\n        \"CNF_NAME\": \"BI PORT2\"\n    },\n    \"WBSERVICE2\": {\n        \"CNF_DESCRIPTION\": \"http://5.252.216.14:9502/analytics-ws/saw.dll?SoapImpl=\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICE2\",\n        \"CNF_NAME\": \"soapEndpointUrl2\"\n    },\n    \"SCHEDULER2\": {\n        \"CNF_DESCRIPTION\": \"23:17:20\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"SCHEDULER2\",\n        \"CNF_NAME\": \"TestLogConfig2\"\n    },\n    \"PROTOCOL2\": {\n        \"CNF_DESCRIPTION\": \"http://\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"PROTOCOL2\",\n        \"CNF_NAME\": \"PROTOCOL2\"\n    },\n    \"BIADMIN2\": {\n        \"CNF_DESCRIPTION\": \"weblogic\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMIN2\",\n        \"CNF_NAME\": \"BIADMIN2\"\n    },\n    \"WBSERVICEACTION2\": {\n        \"CNF_DESCRIPTION\": \"http://tempuri.org/Login\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICEACTION2\",\n        \"CNF_NAME\": \"soapAction2\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.250:9502/Utopia/rest/config/addconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"250"
+					],
+					"port": "9502",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"addconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addConfig remote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BIDASHBOARDPORT\": {\n        \"CNF_DESCRIPTION\": \"9502\",\n        \"CNF_STATE\": \"0\",\n        \"CNF_TYPE\": \"BIDASHBOARDPORT2\",\n        \"CNF_NAME\": \"BIDASHBOARDPORT2\"\n    },\n    \"BIADMINPASS2\": {\n        \"CNF_DESCRIPTION\": \"oracle12C\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMINPASS2\",\n        \"CNF_NAME\": \"BIADMINPASS2\"\n    },\n    \"BIIP2\": {\n        \"CNF_DESCRIPTION\": \"192.168.1.250\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIIP2\",\n        \"CNF_NAME\": \"BI IP2\"\n    },\n    \"BIPORT2\": {\n        \"CNF_DESCRIPTION\": \"9500\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIPORT2\",\n        \"CNF_NAME\": \"BI PORT2\"\n    },\n    \"WBSERVICE2\": {\n        \"CNF_DESCRIPTION\": \"http://5.252.216.14:9502/analytics-ws/saw.dll?SoapImpl=\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICE2\",\n        \"CNF_NAME\": \"soapEndpointUrl2\"\n    },\n    \"SCHEDULER2\": {\n        \"CNF_DESCRIPTION\": \"23:17:20\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"SCHEDULER2\",\n        \"CNF_NAME\": \"TestLogConfig2\"\n    },\n    \"PROTOCOL2\": {\n        \"CNF_DESCRIPTION\": \"http://\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"PROTOCOL2\",\n        \"CNF_NAME\": \"PROTOCOL2\"\n    },\n    \"BIADMIN2\": {\n        \"CNF_DESCRIPTION\": \"weblogic\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMIN2\",\n        \"CNF_NAME\": \"BIADMIN2\"\n    },\n    \"WBSERVICEACTION2\": {\n        \"CNF_DESCRIPTION\": \"http://tempuri.org/Login\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICEACTION2\",\n        \"CNF_NAME\": \"soapAction2\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://5.201.178.229:9502/Utopia/rest/config/addconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"5",
+						"201",
+						"178",
+						"229"
+					],
+					"port": "9502",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"addconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addConfig local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BIDASHBOARDPORT\": {\n        \"CNF_DESCRIPTION\": \"9502\",\n        \"CNF_STATE\": \"0\",\n        \"CNF_TYPE\": \"BIDASHBOARDPORT2\",\n        \"CNF_NAME\": \"BIDASHBOARDPORT2\"\n    },\n    \"BIADMINPASS2\": {\n        \"CNF_DESCRIPTION\": \"oracle12C\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMINPASS2\",\n        \"CNF_NAME\": \"BIADMINPASS2\"\n    },\n    \"BIIP2\": {\n        \"CNF_DESCRIPTION\": \"192.168.1.250\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIIP2\",\n        \"CNF_NAME\": \"BI IP2\"\n    },\n    \"BIPORT2\": {\n        \"CNF_DESCRIPTION\": \"9500\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIPORT2\",\n        \"CNF_NAME\": \"BI PORT2\"\n    },\n    \"WBSERVICE2\": {\n        \"CNF_DESCRIPTION\": \"http://5.252.216.14:9502/analytics-ws/saw.dll?SoapImpl=\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICE2\",\n        \"CNF_NAME\": \"soapEndpointUrl2\"\n    },\n    \"SCHEDULER2\": {\n        \"CNF_DESCRIPTION\": \"23:17:20\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"SCHEDULER2\",\n        \"CNF_NAME\": \"TestLogConfig2\"\n    },\n    \"PROTOCOL2\": {\n        \"CNF_DESCRIPTION\": \"http://\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"PROTOCOL2\",\n        \"CNF_NAME\": \"PROTOCOL2\"\n    },\n    \"BIADMIN2\": {\n        \"CNF_DESCRIPTION\": \"weblogic\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMIN2\",\n        \"CNF_NAME\": \"BIADMIN2\"\n    },\n    \"WBSERVICEACTION2\": {\n        \"CNF_DESCRIPTION\": \"http://tempuri.org/Login\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICEACTION2\",\n        \"CNF_NAME\": \"soapAction2\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/config/addconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"addconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeConfig viuna",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BIDASHBOARDPORT2\": {\n        \"CNF_DESCRIPTION\": \"9502\",\n        \"CNF_STATE\": \"0\",\n        \"CNF_TYPE\": \"BIDASHBOARDPORT2\",\n        \"CNF_NAME\": \"BIDASHBOARDPORT2\"\n    },\n    \"BIADMINPASS2\": {\n        \"CNF_DESCRIPTION\": \"oracle12C\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMINPASS2\",\n        \"CNF_NAME\": \"BIADMINPASS2\"\n    },\n    \"BIIP2\": {\n        \"CNF_DESCRIPTION\": \"192.168.1.250\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIIP2\",\n        \"CNF_NAME\": \"BI IP2\"\n    },\n    \"BIPORT2\": {\n        \"CNF_DESCRIPTION\": \"9500\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIPORT2\",\n        \"CNF_NAME\": \"BI PORT2\"\n    },\n    \"WBSERVICE2\": {\n        \"CNF_DESCRIPTION\": \"http://5.252.216.14:9502/analytics-ws/saw.dll?SoapImpl=\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICE2\",\n        \"CNF_NAME\": \"soapEndpointUrl2\"\n    },\n    \"SCHEDULER2\": {\n        \"CNF_DESCRIPTION\": \"23:17:20\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"SCHEDULER2\",\n        \"CNF_NAME\": \"TestLogConfig2\"\n    },\n    \"PROTOCOL2\": {\n        \"CNF_DESCRIPTION\": \"http://\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"PROTOCOL2\",\n        \"CNF_NAME\": \"PROTOCOL2\"\n    },\n    \"BIADMIN2\": {\n        \"CNF_DESCRIPTION\": \"weblogic\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMIN2\",\n        \"CNF_NAME\": \"BIADMIN2\"\n    },\n    \"WBSERVICEACTION2\": {\n        \"CNF_DESCRIPTION\": \"http://tempuri.org/Login\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICEACTION2\",\n        \"CNF_NAME\": \"soapAction2\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.250:9502/Utopia/rest/config/removeconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"250"
+					],
+					"port": "9502",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"removeconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeConfig remote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BIDASHBOARDPORT2\": {\n        \"CNF_DESCRIPTION\": \"9502\",\n        \"CNF_STATE\": \"0\",\n        \"CNF_TYPE\": \"BIDASHBOARDPORT2\",\n        \"CNF_NAME\": \"BIDASHBOARDPORT2\"\n    },\n    \"BIADMINPASS2\": {\n        \"CNF_DESCRIPTION\": \"oracle12C\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMINPASS2\",\n        \"CNF_NAME\": \"BIADMINPASS2\"\n    },\n    \"BIIP2\": {\n        \"CNF_DESCRIPTION\": \"192.168.1.250\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIIP2\",\n        \"CNF_NAME\": \"BI IP2\"\n    },\n    \"BIPORT2\": {\n        \"CNF_DESCRIPTION\": \"9500\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIPORT2\",\n        \"CNF_NAME\": \"BI PORT2\"\n    },\n    \"WBSERVICE2\": {\n        \"CNF_DESCRIPTION\": \"http://5.252.216.14:9502/analytics-ws/saw.dll?SoapImpl=\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICE2\",\n        \"CNF_NAME\": \"soapEndpointUrl2\"\n    },\n    \"SCHEDULER2\": {\n        \"CNF_DESCRIPTION\": \"23:17:20\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"SCHEDULER2\",\n        \"CNF_NAME\": \"TestLogConfig2\"\n    },\n    \"PROTOCOL2\": {\n        \"CNF_DESCRIPTION\": \"http://\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"PROTOCOL2\",\n        \"CNF_NAME\": \"PROTOCOL2\"\n    },\n    \"BIADMIN2\": {\n        \"CNF_DESCRIPTION\": \"weblogic\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMIN2\",\n        \"CNF_NAME\": \"BIADMIN2\"\n    },\n    \"WBSERVICEACTION2\": {\n        \"CNF_DESCRIPTION\": \"http://tempuri.org/Login\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICEACTION2\",\n        \"CNF_NAME\": \"soapAction2\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://5.201.178.229:9502/Utopia/rest/config/removeconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"5",
+						"201",
+						"178",
+						"229"
+					],
+					"port": "9502",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"removeconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeConfig local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BIDASHBOARDPORT2\": {\n        \"CNF_DESCRIPTION\": \"9502\",\n        \"CNF_STATE\": \"0\",\n        \"CNF_TYPE\": \"BIDASHBOARDPORT2\",\n        \"CNF_NAME\": \"BIDASHBOARDPORT2\"\n    },\n    \"BIADMINPASS2\": {\n        \"CNF_DESCRIPTION\": \"oracle12C\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMINPASS2\",\n        \"CNF_NAME\": \"BIADMINPASS2\"\n    },\n    \"BIIP2\": {\n        \"CNF_DESCRIPTION\": \"192.168.1.250\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIIP2\",\n        \"CNF_NAME\": \"BI IP2\"\n    },\n    \"BIPORT2\": {\n        \"CNF_DESCRIPTION\": \"9500\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIPORT2\",\n        \"CNF_NAME\": \"BI PORT2\"\n    },\n    \"WBSERVICE2\": {\n        \"CNF_DESCRIPTION\": \"http://5.252.216.14:9502/analytics-ws/saw.dll?SoapImpl=\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICE2\",\n        \"CNF_NAME\": \"soapEndpointUrl2\"\n    },\n    \"SCHEDULER2\": {\n        \"CNF_DESCRIPTION\": \"23:17:20\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"SCHEDULER2\",\n        \"CNF_NAME\": \"TestLogConfig2\"\n    },\n    \"PROTOCOL2\": {\n        \"CNF_DESCRIPTION\": \"http://\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"PROTOCOL2\",\n        \"CNF_NAME\": \"PROTOCOL2\"\n    },\n    \"BIADMIN2\": {\n        \"CNF_DESCRIPTION\": \"weblogic\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"BIADMIN2\",\n        \"CNF_NAME\": \"BIADMIN2\"\n    },\n    \"WBSERVICEACTION2\": {\n        \"CNF_DESCRIPTION\": \"http://tempuri.org/Login\",\n        \"CNF_STATE\": \"1\",\n        \"CNF_TYPE\": \"WBSERVICEACTION2\",\n        \"CNF_NAME\": \"soapAction2\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/config/removeconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"removeconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editConfig viuna",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BIDASHBOARDPORT2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"BIADMINPASS2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"BIIP2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"BIPORT2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"WBSERVICE2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"SCHEDULER2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"PROTOCOL2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n\n    },\n    \"BIADMIN2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"WBSERVICEACTION2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.250:9502/Utopia/rest/config/editconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"250"
+					],
+					"port": "9502",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"editconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editConfig remote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BIDASHBOARDPORT2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"BIADMINPASS2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"BIIP2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"BIPORT2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"WBSERVICE2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"SCHEDULER2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"PROTOCOL2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n\n    },\n    \"BIADMIN2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"WBSERVICEACTION2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://5.201.178.229:9502/Utopia/rest/config/editconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"5",
+						"201",
+						"178",
+						"229"
+					],
+					"port": "9502",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"editconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editConfig local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"BIDASHBOARDPORT2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"BIADMINPASS2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"BIIP2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"BIPORT2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"WBSERVICE2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"SCHEDULER2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"PROTOCOL2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n\n    },\n    \"BIADMIN2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    },\n    \"WBSERVICEACTION2\": {\n        \"CNF_DESCRIPTION\": \"test\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/config/editconfigs?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"config",
+						"editconfigs"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

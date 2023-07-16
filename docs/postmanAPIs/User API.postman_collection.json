@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "c9eb8056-4943-4989-86c4-aa63ae9f5c7f",
+		"name": "User API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "usersCount local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/user/userscount?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"user",
+						"userscount"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findUser local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"USER_USERNAME\": \"userUserBIG\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/user/finduser?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"user",
+						"finduser"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listUser local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first\": \"0\",\n    \"max\": \"100\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/user/lstusers?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"user",
+						"lstusers"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editUser local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userUserBIG2des2\": {\n        \"USER_PASSWORD\": \"userUserBIG2des2\",\n        \"USER_STATUS\": \"0\",\n        \"USER_DESCRIPTION\": \"userUserBIG2des2\",\n        \"USER_DISPLAYNAME\":\"userUserBIG2des2\",\n        \"USER_BRANCH_CODE\":\"12\",\n        \"USER_NAME\":\"userUserBIG2des2\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/user/editusers?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"user",
+						"editusers"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeUser local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userOfMainGroup\": {\n        \"USER_STATUS\": 0,\n        \"USER_DESCRIPTION\": \"test\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/user/removeusers?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"user",
+						"removeusers"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUser local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userUserBIG2des2\": {\n        \"USER_PASSWORD\": \"1234@123a\",\n        \"USER_STATUS\": \"0\",\n        \"USER_DESCRIPTION\": \"test\",\n        \"USER_DISPLAYNAME\":\"firstOne\",\n        \"USER_BRANCH_CODE\":\"code\",\n        \"USER_NAME\":\"USER_NAME\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/user/addusers?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"user",
+						"addusers"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterByUserUsrName local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"USER_NAME\": \"USER_N1112221AME\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/user/filterbyusrName?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"user",
+						"filterbyusrName"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

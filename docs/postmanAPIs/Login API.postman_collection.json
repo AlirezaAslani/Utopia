@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "72cf4f8e-9ca4-413a-b6a4-e92a0849c5ab",
+		"name": "Login API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"weblogic\": {\n        \"PASSWORD\": \"oracle12C\",\n        \"USER_DESCRIPTION\": \"test\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7001/Utopia/rest/login/normaluser?api_key=X-API-Key&API_KEY_VALUE=sd3209Sdkl2DF3dfzsDGEsZ8476",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7001",
+					"path": [
+						"Utopia",
+						"rest",
+						"login",
+						"normaluser"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "X-API-Key"
+						},
+						{
+							"key": "API_KEY_VALUE",
+							"value": "sd3209Sdkl2DF3dfzsDGEsZ8476"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
