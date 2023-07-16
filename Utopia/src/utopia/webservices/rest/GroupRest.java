@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -13,11 +12,9 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import utopia.entities.TblGroup;
 import utopia.entities.TblUserGroup;
 import utopia.enumeration.ExecutionStatusEnum;
@@ -64,8 +61,7 @@ public class GroupRest {
 		userGroupService = new UserGroupService(ugFacade, userFacade, groupFacade);
 	}
 	
-	// Specifies that the method processes HTTP POST requests and return all users
-	// object from DB
+	
 	@Path("/groupscount")
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
@@ -80,8 +76,7 @@ public class GroupRest {
 		return main.toString();
 	}
 
-	// Specifies that the method processes HTTP POST requests and return all users
-	// object from DB
+	
 	@Path("/lstgroups")
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
@@ -119,8 +114,7 @@ public class GroupRest {
 		return main.toString();
 	}
 
-	// Specifies that the method processes HTTP POST requests and edit users list
-	// object from DB
+	
 	@POST
 	@Path("/addgroups")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -155,8 +149,7 @@ public class GroupRest {
 
 	}
 
-	// Specifies that the method processes HTTP POST requests and edit users list
-	// object from DB
+
 	@POST
 	@Path("/editgroups")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -190,8 +183,7 @@ public class GroupRest {
 
 	}
 
-	// Specifies that the method processes HTTP POST requests and edit users list
-	// object from DB
+
 	@POST
 	@Path("/removegroups")
 	@Produces(MediaType.APPLICATION_JSON)
